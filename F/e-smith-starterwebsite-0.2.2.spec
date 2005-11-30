@@ -2,13 +2,14 @@ Summary: e-smith server and gateway - starterwebsite module
 %define name e-smith-starterwebsite
 Name: %{name}
 %define version 0.2.2
-%define release 01
+%define release 02
 Version: %{version}
 Release: %{release}
 License: GPL
 Vendor: Mitel Networks Corporation
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
+Patch0: e-smith-starterwebsite-0.2.2-GPL.patch
 Packager: e-smith developers <bugs@e-smith.com>
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
@@ -19,6 +20,9 @@ AutoReqProv: no
 e-smith server and gateway software - starterwebsite module.
 
 %changelog
+* Wed Nov 30 2005 Gordon Rowell <gordonr@gormand.com.au> 0.2.2-02
+- Add COPYING file
+
 * Fri Oct 14 2005 Gordon Rowell <gordonr@e-smith.com>
 - [0.2.2-01]
 - Remove L10Ns from base packages [SF: 1309520]
@@ -62,6 +66,7 @@ e-smith server and gateway software - starterwebsite module.
 
 %prep
 %setup
+%patch0 -p1
 
 %pre
 
