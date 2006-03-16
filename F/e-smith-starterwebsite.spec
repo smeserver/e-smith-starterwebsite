@@ -1,15 +1,14 @@
 Summary: e-smith server and gateway - starterwebsite module
 %define name e-smith-starterwebsite
 Name: %{name}
-%define version 0.2.2
-%define release 02
+%define version 1.0.0
+%define release 01
 Version: %{version}
 Release: %{release}
 License: GPL
 Vendor: Mitel Networks Corporation
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-Patch0: e-smith-starterwebsite-0.2.2-GPL.patch
 Packager: e-smith developers <bugs@e-smith.com>
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
@@ -20,6 +19,9 @@ AutoReqProv: no
 e-smith server and gateway software - starterwebsite module.
 
 %changelog
+* Thu Mar 16 2006 Gordon Rowell <gordonr@gormand.com.au> 1.0.0-01
+- Roll stable stream version. [SME: 1016]
+
 * Wed Nov 30 2005 Gordon Rowell <gordonr@gormand.com.au> 0.2.2-02
 - Add COPYING file
 
@@ -66,7 +68,6 @@ e-smith server and gateway software - starterwebsite module.
 
 %prep
 %setup
-%patch0 -p1
 
 %pre
 
