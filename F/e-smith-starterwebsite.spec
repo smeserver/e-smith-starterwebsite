@@ -2,14 +2,14 @@ Summary: e-smith server and gateway - starterwebsite module
 %define name e-smith-starterwebsite
 Name: %{name}
 %define version 1.0.0
-%define release 01
+%define release 2
 Version: %{version}
-Release: %{release}
+Release: %smerelease %{release}
+Packager: %{_packager}
 License: GPL
 Vendor: Mitel Networks Corporation
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-Packager: e-smith developers <bugs@e-smith.com>
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
 Requires: e-smith-base
@@ -19,6 +19,10 @@ AutoReqProv: no
 e-smith server and gateway software - starterwebsite module.
 
 %changelog
+* Thu Dec 07 2006 Shad L. Lords <slords@mail.com>
+- Update to new release naming.  No functional changes.
+- Make Packager generic
+
 * Thu Mar 16 2006 Gordon Rowell <gordonr@gormand.com.au> 1.0.0-01
 - Roll stable stream version. [SME: 1016]
 
