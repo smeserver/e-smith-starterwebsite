@@ -8,7 +8,7 @@ Release: %{release}%{?dist}
 License: GPL
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-Patch0: e-smith-starterwebsite-1.0.0.tags2general.patch
+Patch0: e-smith-starterwebsite-1.0.0.tags2general.patch2
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
 Requires: e-smith-base
