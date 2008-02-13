@@ -8,11 +8,9 @@ Release: %{release}%{?dist}
 License: GPL
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-Patch0: e-smith-starterwebsite-1.0.0.tags2general.patch2
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
 Requires: e-smith-base
-Requires: e-smith-formmagick >= 1.4.0-9
 BuildRequires: e-smith-devtools >= 1.13.1-03
 AutoReqProv: no
 
@@ -20,9 +18,6 @@ AutoReqProv: no
 e-smith server and gateway software - starterwebsite module.
 
 %changelog
-* Wed Feb 13 2008 Stephen Noble <support@dungog.net> 1.0.0-3
-- Remove <base> tags now in general [SME: 3922]
-
 * Sun Apr 29 2007 Shad L. Lords <slords@mail.com>
 - Clean up spec so package can be built by koji/plague
 
@@ -79,7 +74,6 @@ e-smith server and gateway software - starterwebsite module.
 
 %prep
 %setup
-%patch0 -p1
 
 %pre
 
