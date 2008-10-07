@@ -1,14 +1,15 @@
+# $Id: e-smith-starterwebsite.spec,v 1.3 2008/10/07 19:22:53 slords Exp $
+
 Summary: e-smith server and gateway - starterwebsite module
 %define name e-smith-starterwebsite
 Name: %{name}
-%define version 1.0.0
-%define release 3
+%define version 2.0.0
+%define release 1
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-Patch0: e-smith-starterwebsite-1.0.0.tags2general.patch3
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
 Requires: e-smith-base
@@ -20,6 +21,9 @@ AutoReqProv: no
 e-smith server and gateway software - starterwebsite module.
 
 %changelog
+* Tue Oct 7 2008 Shad L. Lords <slords@mail.com> 2.0.0-1.sme
+- Roll new stream to separate sme7/sme8 trees [SME: 4633]
+
 * Wed Feb 13 2008 Stephen Noble <support@dungog.net> 1.0.0-3
 - Remove <base> tags now in general [SME: 3922]
 
@@ -79,7 +83,6 @@ e-smith server and gateway software - starterwebsite module.
 
 %prep
 %setup
-%patch0 -p1
 
 %pre
 
